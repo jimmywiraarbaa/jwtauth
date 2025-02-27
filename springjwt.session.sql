@@ -1,0 +1,7 @@
+CREATE TABLE mengajar (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    guru_id BIGINT NOT NULL,
+    kelas_id BIGINT NOT NULL,
+    FOREIGN KEY (guru_id) REFERENCES guru(id) ON DELETE CASCADE,
+    FOREIGN KEY (kelas_id) REFERENCES kelas(id) ON DELETE CASCADE
+);
